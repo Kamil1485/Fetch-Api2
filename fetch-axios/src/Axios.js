@@ -11,7 +11,7 @@ const Axios = () => {
 useEffect(()=>{ //axios farkı dönen cevap içinde tüm verileri data içinde saklar 
     axios.get("https://restcountries.com/v3.1/all").then(response=>{
       console.log(response) /* {data: Array(250), status: 200, statusText: 'OK', headers: {…}, config: {…}, …}  response <<<*/
-      console.log(response.data) //  data: (250) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]*/
+      console.log(response.data) 
   setaxiosCountries(response.data)
     })
   },[])
