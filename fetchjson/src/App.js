@@ -5,20 +5,13 @@ import './App.css';
 function App() {
 const[randomuserDataJSON,setRandomuserDataJSON]=useState("")
 const[datam,setdatam]=useState([]);
-
-
-
+  
 const fetcRandomData=()=>{
-
   return axios.get("https://randomuser.me/api").then(({data})=>{
-console.log(data) //^ JS OBJESİ -JSON OBJESİ DEĞİL!
-    return //!! JSON.stringify(data,null,2) //JSONA DÖNÜŞTÜRÜLMÜŞ VERİ
+console.log(data) 
+    return //!! JSON.stringify(data,null,2) 
   }).catch((error)=>{alert("Hata")})
 }
-
-
-
-
 
 useEffect(()=>{
   fetcRandomData().then(randomData=>{
@@ -26,10 +19,6 @@ useEffect(()=>{
   })
 
 },[])
-
-
-
-
 
 useEffect(()=>{
   const getdata=async()=>{
@@ -45,20 +34,14 @@ useEffect(()=>{
   
 },[])
 
-
 console.log(datam)
-
-
+  
   return (
-    <div className="App">
- 
-   
+    <div className="App"> 
   <br/>
-
   <pre>
   {randomuserDataJSON}
   </pre>
-  
 
 <h2>RANDOM KİŞİ DATA JS OBJESİ!</h2>
 {datam.map((post) => {
@@ -69,7 +52,6 @@ console.log(datam)
             </div>
          );
       })}
-
 
     </div>
   );
